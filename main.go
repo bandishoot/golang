@@ -1,19 +1,14 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var size int
-	fmt.Scan(&size)
-	slice := make([]int, size)
-	for i := 0; i < len(slice); i++ {
-		fmt.Scan(&slice[i])
+	m := map[uint16]string{
+		1: "один",
+		2: "два",
+		3: "три",
 	}
-	for i := 0; i < len(slice); i++ {
-		if slice[i]%3 == 0 {
-			fmt.Print(slice[i], " ")
-		}
-	}
+	fmt.Println(m[1]) // "один"
+	fmt.Println(m[2]) // "два"
+	fmt.Println(m[3]) // "три"
 }
