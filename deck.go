@@ -5,11 +5,12 @@ import "fmt"
 type deck []string
 
 func newDeck() deck {
+	cards := deck{}
 	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardVaules := []string{"Ace", "Two", "Three", "Four"}
 
-	for i, suit := range cardSuits {
-		for j, value := range cardVaules {
+	for _, suit := range cardSuits {
+		for _, value := range cardVaules {
 			cards = append(cards, suit+" of "+value)
 		}
 	}
